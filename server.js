@@ -52,7 +52,13 @@ app.delete("/todos/:id", (req, res)=>{
     return res.status(404).send();
   }
   Todo.findByIdAndRemove(id).then((todo)=>{
+    if(!todo){
+      res.status(404).send();
+    }
     console.log(todo);
+    res.status(200).send(todo);
+  },()=>{
+    res.status(400).send();
   });
 });
 
