@@ -1,9 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const {User} = require('./Server/models/user');
-const {Todo} = require('./Server/models/todo');
-const {mongoose} = require('./Server/db/mongoose');
+const {User} = require('./server/models/user');
+const {Todo} = require('./server/models/todo');
+const {mongoose} = require('./server/db/mongoose');
 
 const {ObjectID} = require('mongodb');
 
