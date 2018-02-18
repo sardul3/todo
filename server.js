@@ -8,7 +8,7 @@ const {mongoose} = require('./Server/db/mongoose');
 const {ObjectID} = require('mongodb');
 
 
-const port = process.env.PORT || 3000;
+var port = process.env.PORT || 3000;
 var app = express();
 app.use(bodyParser.json());
 
