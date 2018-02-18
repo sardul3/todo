@@ -8,7 +8,6 @@ const {mongoose} = require('./Server/db/mongoose');
 const {ObjectID} = require('mongodb');
 
 
-var port = process.env.PORT || 3000;
 var app = express();
 app.use(bodyParser.json());
 
@@ -48,6 +47,6 @@ app.get('/todos/:id', (req,res)=>{
 });
 
 
-app.listen(port, ()=>{
-  console.log(`Port ${port}  is up and running!`);
+app.listen(process.env.PORT || 3000, ()=>{
+  console.log(`Port is up and running!`);
 })
